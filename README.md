@@ -4,7 +4,7 @@ This project demonstrates real-time object detection using **SIFT (Scale-Invaria
 
 Below is a demonstration of the project in action:
 
-![Object Detection Demo](demo_image.png)
+![Object Detection Demo](examples/SIFT.png.png)
 
 *Image showcasing the matching process and detection of the object in a video frame.*
 
