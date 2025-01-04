@@ -26,3 +26,10 @@ To ensure the project runs smoothly, the following dependencies are required:
 Install these dependencies using pip:
 ```bash
 pip install opencv-python numpy
+```
+## Usage
+
+Change the path of img1 in line 6 of **main.py** to the path to the intended query image. Next change the path in line 21 to the path to the intended video to detect the object in, including the webcam. To run the project, simply execute:
+```bash
+python main.py
+```

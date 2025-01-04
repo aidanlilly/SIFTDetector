@@ -3,7 +3,7 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 
 # Load the query image (the box) and resize it to a fixed width while maintaining the aspect ratio
-img1 = cv.imread('deoderant.jpeg', cv.IMREAD_GRAYSCALE)  # Query image
+img1 = cv.imread('path_to_img', cv.IMREAD_GRAYSCALE)  # Query image
 fixed_width = 600  # Set a fixed width for the image
 aspect_ratio = img1.shape[1] / img1.shape[0]  # Maintain the aspect ratio
 new_height = int(fixed_width / aspect_ratio)
@@ -18,8 +18,7 @@ sift = cv.SIFT_create(nfeatures=500)  # Limit keypoints to 500 for efficiency
 kp1, des1 = sift.detectAndCompute(img1, None)
 des1 = np.float32(des1)  # Ensure descriptors are in float32 type
 
-# Start capturing from the webcam
-cap = cv.VideoCapture('deovid.mp4')
+cap = cv.VideoCapture(0) # 0 for webcam, or replace with video file path
 
 while True:
     # Read a frame from the webcam
